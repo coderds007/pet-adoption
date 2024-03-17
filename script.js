@@ -8,3 +8,13 @@ async function start() {
 }
 
 start()
+
+async function petsArea() {
+  const petPromise = await fetch("https://learnwebcode.github.io/bootcamp-pet-data/pets.json")
+  const petData = await petPromise.json()
+  petData.forEach((pet) => {
+    console.log(pet.name)
+  })
+}
+
+petsArea()
